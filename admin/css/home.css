@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.top-header {
+  width: 100%;
+  right: 0;
+  height: auto;
+  background-color: rgb(83, 171, 221);
+}
+.wraps {
+  padding-top: 20px;
+}
+.wraps::after {
+  clear: both;
+}
+.sidenav {
+  margin: 0;
+  padding: 0;
+  width: 170px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 9;
+  left: 0;
+  transition: linear 0.2s;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.sidenav a {
+  display: block;
+  color: rgb(61, 35, 179);
+  padding: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.card {
+  margin: 30px auto;
+}
+.post-footer ul {
+  list-style-type: none;
+  font-size: 30px;
+  text-align: center;
+}
+.post-footer ul li {
+  display: inline;
+}
+
+.post-footer li a {
+  text-decoration: none;
+  color: white;
+  padding: 3px 15px;
+  margin-left: 10px;
+  border: 2px solid rgb(3, 125, 238);
+  border-radius: 3px;
+  transition: steps(4) 0.22s;
+}
+.post-footer li a:hover {
+  color: white;
+  background-color: rgb(35, 137, 233);
+}
+
+.notification {
+  background-color: white;
+  border: 1px solid blueviolet;
+  margin: 5px 0px 20px 0px;
+}
+.notif-body {
+  padding: 2px;
+  font-size: 20px;
+}
+.notification a {
+  font-weight: bold;
+  font-size: 34px;
+  background-color: rgb(83, 85, 221);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  height: 50px;
+  font-size: 26px;
+  transition: linear 0.5s;
+}
+.notification a:hover {
+  background-color: rgb(10, 0, 0, 0.5);
+  border: 2px solid rgb(83, 85, 221);
+  color: white;
+  cursor: pointer;
+}
+.notification a:hover::after {
+  content: ">>";
+  transform: rotateX(45);
+  transition: linear 1s;
+}
+
+.footer {
+  height: 300px;
+  width: 100%;
+  margin: 0 10px;
+  padding: 5px;
+  background-color: cornflowerblue;
+  z-index: 19;
+  text-align: center;
+}
+
+.footer a {
+  border-bottom: 2px solid black;
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: black;
+  border: none;
+}
+
+.to-top {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  left: 90%;
+  top: 80%;
+  display: none;
+  z-index: 99;
+  background-color: chartreuse;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+}
+
+.to-top:hover {
+  background-color: rgb(42, 255, 255);
+  color: black;
+}
+
+.form input {
+  margin-bottom: 20px;
+}
+
+.members-list {
+  width: 80%;
+  margin: 5px;
+  outline: ridge;
+  margin: 10px;
+}
+
+.members {
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 2px solid teal;
+}
+
+.members .p-2 {
+  width: 33%;
+}
+.members img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.members .user-name {
+  text-align: left;
+  padding-top: 20px;
+  margin: 10px;
+}
+
+.members .active {
+  padding-top: 30px;
+  margin-top: 20px;
+}
+.members .active i {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(34, 226, 50);
+  color: white;
+  border-radius: 5px;
+  float: right;
+}
+
+#post-section {
+  margin-left: 160px;
+}
+
+#notification-section {
+}
+
+@media screen and (max-width: 932px) {
+  #post-section {
+    margin-left: 20px;
+  }
+  #notification-section {
+    width: 100%;
+  }
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0;
+    left: 0;
+    margin-right: 4px;
+  }
+  .sidenav a {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}

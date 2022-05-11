@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" />
+    <link href="../Image/loo.png" type="x-ico" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link href="home.css" rel="stylesheet" />
+    <title>Members list</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <header class="row top-header sticky-top" id="top-header">
+        <div class="col-md-4">
+          <img
+            src="../Image/loo.png"
+            style="width: 200px; height: 100%"
+            alt="logo"
+          />
+        </div>
+        <div class="col-md-4">
+          <div class="wraps">
+            <input type="search" class="form-control" placeholder="Searc" />
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="wraps float-right">
+            <button type="button" class="btn btn-outline-dark">Log out</button>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="container">
+      <div class="members-list">
+        <div class="col-md-12">
+          <h2 class="alert-primary text-center">Members List</h2>
+        </div>
+
+        <div class="d-inline-flex members bg-transparent">
+          <div class="p-2">
+            <a class="avatar" href="user/id">
+              <img
+                class="img-thumbnail"
+                src="../Image/IMG_20181223_084411.jpg"
+              />
+            </a>
+          </div>
+          <div class="p-2 user-name"><h3>User Name</h3></div>
+          <div class="p-2 active"><i class="dot"></i></div>
+          <button class="btn btn-light m-2 usereditmodal" id="user1">
+            EDIT
+          </button>
+        </div>
+
+        <div class="d-inline-flex members bg-transparent">
+          <div class="p-2">
+            <a class="avatar" href="user/id">
+              <img
+                class="img-thumbnail"
+                src="../Image/IMG_20181223_084411.jpg"
+              />
+            </a>
+          </div>
+          <div class="p-2 user-name"><h3>User Name</h3></div>
+          <div class="p-2 active"><i class="dot"></i></div>
+          <button class="btn btn-light m-2 usereditmodal" id="user2">
+            EDIT
+          </button>
+        </div>
+
+        <div class="d-inline-flex members bg-transparent">
+          <div class="p-2">
+            <a class="avatar" href="user/id">
+              <img
+                class="img-thumbnail"
+                src="../Image/IMG_20181223_084411.jpg"
+              />
+            </a>
+          </div>
+          <div class="p-2 user-name"><h3>User Name</h3></div>
+          <div class="p-2 active"><i class="dot"></i></div>
+          <button class="btn btn-light m-2 usereditmodal" id="user3">
+            EDIT
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add New User</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <div class="modal-body"></div>
+          <form class="form" action="/useedit" method="POST">
+            <input
+              class="form-control"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="user name"
+            />
+            <input
+              class="form-control"
+              id="fname"
+              name="fname"
+              placeholder="First name"
+            />
+            <input
+              class="form-control"
+              id="lname"
+              name="lname"
+              placeholder="Last Name"
+            />
+            <input
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="email address"
+              type="email"
+            />
+            <input
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+            <input
+              class="btn btn-outline-success m-5"
+              type="submit"
+              value="Update"
+            />
+          </form>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        //   You have to fetch user data from database and display it on form
+
+        $(".usereditmodal").click(function () {
+          const id = $(this).attr("id");
+
+          let userInfoJson = {
+            userid: "u1",
+            username: "username",
+            firstname: "User",
+            lastname: "Name",
+            email: "Email@gmail.com",
+          };
+          $(".modal-title").text("Editing User");
+          $(".modal-header").addClass("bg-primary text-center");
+          $("#username").val(id);
+          $("#fname").val(userInfoJson.firstname);
+          $("#lname").val(userInfoJson.lastname);
+          $("#email").val(userInfoJson.email);
+
+          $("#myModal").modal({ backdrop: true });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,intial-scale=1.0" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+<script src="bootstrap/jquery-1.11.1.min.js"></script>
+<!-- <script src="bootstrap/popper.min.js"></script> -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css" />
+
+<title>Tech Zone General IT Solution</title>
+<script>
+    $(document).ready(function () {
+        $('#h1-click').click(function () {
+            $('h1-click').toggleClass('ac-active');
+        });
+
+        $('#openbtn').click(function () {
+            $('#menu')
+                .css({ display: 'block' })
+                .addClass('overlay')
+                .animate({ width: '100%' }, "0.5s");
+            $('.onoverlay').css({ display: 'block' });
+
+        });
+
+        $('#closebtn').click(function () {
+            $('#menu')
+                .animate({ width: '0' }, "0.5s")
+                .css({ display: 'none' })
+                .removeClass("overlay");
+            $('.onoverlay').css({ display: 'none' });
+        });
+
+
+        $(window).scroll(function (e) {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                $('#navbar').css({ padding: '3px 10px', height: '90%' });
+                $('#logo').css({ height: '80%' });
+                $('.to-top').show();
+
+            }
+            else {
+                $('#navbar').css({ padding: '10px 10px', height: '100%' });
+                $('#logo').css({ height: '100%' });
+                $('.to-top').hide();
+
+
+            }
+        });
+
+        $('#eb1').hover(function (e) {
+            $('#hv').show();
+        });
+
+    });
+</script>
+
+<body>
+    <header>
+        <div id="top-header " class="fixed-top">
+            <div class="top-header-text bg-dark text-white">
+                <p>+25192099999 | techzonegits@gmail.com</p>
+            </div>
+            <div class="top-navbar">
+                <nav id="navbar" class="navbar navbar-expand-md  sticky-top ">
+                    <a id="logo" class="navbar-brand " href="index.html" title="Techzone General It Solution">
+                        <img src="image/loo.png" alt="Techzone General It Solution" style="width: 200px;" />
+                    </a>
+                    <button class="navbar-toggler bg-dark text-light  mr-5" type="button" id="openbtn"
+                        data-toggle="collapse" aria-controls="#menu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span>&#9776;</span></button>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <div class="onoverlay">
+                            <h4 class="menu-title" id="menu-title">Menu</h4>
+                            <a onclick="javascript:void(0)" id="closebtn">&times;</a>
+                        </div>
+
+                        <ul style="margin-left: 140px;" class="navbar-nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" title="Our works">Work</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" title="Our experties">Experties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" title="See company Process">Processs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" title="Agencies">Agency</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbardropdown"
+                                    title="Company Resources(Guides and Blogs">Resource</a>
+                                <div class="dropdown-menu bg-light text-white">
+                                    <a class="dropdown-item" href="#" title="Blog Posts from company">Blogs</a>
+                                    <a class="dropdown-item" href="#" title="Guides"> Guides</a>
+                                </div>
+                            </li>
+                            <li class=" float-right nav-pills btn bg-primary">
+                                <a class="nav-link" href="#contact-us">CONTACT-US</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+            </div>
+
+            </nav>
+        </div>
+        </div>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <section class="row " id="slogan">
+            <div class="col-12 slogan-bg">
+                <p>BIG IDEAS ,<br>
+                    CREATIVE PEOPLE ,<br>
+                    NEW TECHNOLOGY .</p>
+            </div>
+
+        </section>
+        <section class="row first-sec">
+            <div class="col-md-6 wethink">
+                <img src="image/we-think-big.png" alt="we think big" />
+                <h3>General Tech SOlution in Eth</h3>
+                <p>We are TECHZONE The command
+                    index.html was not found, but does exist in the current location.
+                    Windows PowerShell does not load commands from the current location by default.
+                    If you trust this command, instead type: ".\index.html". See
+                    get-help about_Command_Precedence" for more details</p>
+
+            </div>
+            <div class="col-md-6 ">
+                <div id="slideshow" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                        <li data-target="#slideshow" data-slide-to="1"></li>
+                        <li data-target="#slideshow" data-slide-to="2"></li>
+                    </ul>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="item-text">
+                                <h3>AWARD WINNING DIGITAL AGENCY</h3>
+                                <p>for the physician formula</p>
+                                <p><a href="#">Explore project</a></p>
+                                <img src="image/bes-class.png" />
+
+                            </div>
+                            <div class="item-image">
+                                <img src="Image/pf-img.png" alt="Los Angeles">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="item-text">
+                                <h3>AWARD WINNING DIGITAL AGENCY</h3>
+                                <p>for the physician formula</p>
+                                <p><a href="#">Explore project</a></p>
+                                <img src="image/bes-class.png" />
+
+                            </div>
+                            <div class="item-image">
+                                <img src="Image/qe-award-img.png" alt="Chicago">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="item-text">
+                                <h3>AWARD WINNING DIGITAL AGENCY</h3>
+                                <p>for the physician formula</p>
+                                <p><a href="#">Explore project</a></p>
+                                <img src="image/bes-class.png" />
+                            </div>
+                            <div class="item-image">
+                                <img src="Image/design-agency-Los-Angeles.png" alt="New York">
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#slideshow" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#slideshow" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="container-fluid" id="recent-work">
+            <div class="adjust-text recent-work">
+                <h2>RECENT WORK</h2>
+                <p>We have a deep understanding of user habits and behaviors.
+                    We are committed to using fact-based knowledge and our unique brand of innovation to help you
+                    dominate the competition.
+                    Every project is customized for optimum visibility and audience response.</p>
+
+            </div>
+
+            <div class="row">
+                <div class="wrap pone col-md-6">
+                    <div class="project p-3">
+                        <h3>LIGHTING UP AN INTERNET PRECENCE FOR BEGA</h3>
+                        <p>somethinmmm</p>
+                        <button class="btn btn-outline-primary">
+                            EXPORE PROJECT
+                        </button>
+                    </div>
+                </div>
+
+                <div class="wrap col-md-6 ptwo">
+                    <div class="project p-3">
+                        <h3>LIGHTING UP AN INTERNET PRECENCE FOR BEGA</h3>
+                        <p>somethinmmm</p>
+                        <button class="btn btn-outline-primary">
+                            EXPORE PROJECT
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="wrap col-md-6 pthree">
+                    <div class="project p-3">
+                        <h3>LIGHTING UP AN INTERNET PRECENCE FOR BEGA</h3>
+                        <p>somethinmmm</p>
+                        <button class="btn btn-outline-primary">
+                            EXPORE PROJECT
+                        </button>
+                    </div>
+                </div>
+                <div class="wrap col-md-6 pfour">
+                    <div class="project p-3">
+                        <h3>LIGHTING UP AN INTERNET PRECENCE FOR BEGA</h3>
+                        <p>somethinmmm</p>
+                        <button class="btn btn-outline-primary">
+                            EXPORE PROJECT
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="wrap col-md-6 pfive">
+                    <div class="project p-3">
+                        <h3>LIGHTING UP AN INTERNET PRECENCE FOR BEGA</h3>
+                        <p>somethinmmm</p>
+                        <button class="btn btn-outline-primary">
+                            EXPORE PROJECT
+                        </button>
+                    </div>
+                </div>
+                <div class=" wrap col-md-6  psix">
+                    <div class="project p-3">
+                        <h3>LIGHTING UP AN INTERNET PRECENCE FOR BEGA</h3>
+                        <p>somethinmmm</p>
+                        <button class="btn btn-outline-primary">
+                            EXPORE PROJECT
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn col-4 align-self-center btn-info "> VIEW MORE WORK</button>
+
+            </div>
+
+
+
+
+        </section>
+
+        <section id="clients" class="container-fluid">
+            <div class=" clients-text">
+                <h3>SELECT CLIENTS</h3>
+                <p>We have a deep understanding of user habits and behaviors.
+                    We are committed to using fact-based knowledge and our unique brand of innovation to help you
+                    dominate the competition.
+                    Every project is customized for optimum visibility and audience response.</p>
+
+            </div>
+            <div class="clients-list">
+                <ul>
+                    <li>
+                        <i class="sprite1"></i>
+                    </li>
+                    <li>
+                        <i class="sprite1"></i>
+                    </li>
+                    <li>
+                        <i class="sprite1"></i>
+                    </li>
+                    <li>
+                        <i class="sprite1"></i>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section id="expert" class="container-fluid">
+            <div class="expert-header">
+                <h2>EXPERTIES</h2>
+                <p>We have a deep understanding of user habits and behaviors.
+                    We are committed to using fact-based knowledge and our unique brand of innovation to help you
+                    dominate the competition.
+                    Every project is customized for optimum visibility and audience response</p>
+
+            </div>
+
+
+            <div class="experties row">
+                <div class="expert-wrap col-md-4 col-lg-4">
+                    <div class="expert-body" id="eb1">
+                        <span>
+                            <img src="image/qe-best-class.png" alt="Discovery" />
+
+                        </span>
+                        <h2>
+                            DISCOVERY
+                        </h2>
+                        <p>A thorough discovery is at the core of every successful digital solution we craft.
+                            Understanding who you are building for and why you are building it
+                            is more important than the colors or technology you use.
+                            If you don't know these things first, the rest is pointless</p>
+                    </div>
+                    <div class="expert-footer">
+                        <a href="#"> Explore Service &Gt; </a>
+                    </div>
+                </div>
+
+                <div class="expert-wrap col-md-4 col-lg-4">
+                    <div class="expert-body">
+                        <i>
+                            <img src="image/qe-best-class.png" alt="Discovery" />
+
+                        </i>
+                        <h2>
+                            DISCOVERY
+                        </h2>
+                        <p>A thorough discovery is at the core of every successful digital solution we craft.
+                            Understanding who you are building for and why you are building it
+                            is more important than the colors or technology you use.
+                            If you don't know these things first, the rest is pointless</p>
+                    </div>
+                    <div class="expert-footer">
+                        <a href="#"> Explore Service &Gt; </a>
+                    </div>
+                </div>
+                <div class="expert-wrap col-md-4 col-lg-4">
+                    <div class="expert-body">
+                        <i>
+                            <img src="image/qe-best-class.png" alt="Discovery" />
+
+                        </i>
+                        <h2>
+                            DISCOVERY
+                        </h2>
+                        <p>A thorough discovery is at the core of every successful digital solution we craft.
+                            Understanding who you are building for and why you are building it
+                            is more important than the colors or technology you use.
+                            If you don't know these things first, the rest is pointless</p>
+                    </div>
+                    <div class="expert-footer">
+                        <a href="#"> Explore Service &Gt; </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="experties row">
+                <div class="expert-wrap col-md-4 col-lg-4">
+                    <div class="expert-body">
+                        <i>
+                            <img src="image/qe-best-class.png" alt="Discovery" />
+
+                        </i>
+                        <h2>s
+                            DISCOVERY
+                        </h2>
+                        <p>A thorough discovery is at the core of every successful digital solution we craft.
+                            Understanding who you are building for and why you are building it
+                            is more important than the colors or technology you use.
+                            If you don't know these things first, the rest is pointless</p>
+                    </div>
+                    <div class="expert-footer">
+                        <a href="#"> Explore Service &Gt; </a>
+                    </div>
+                </div>
+                <div class="expert-wrap col-md-4 col-lg-4">
+                    <div class="expert-body">
+                        <i>
+                            <img src="image/qe-best-class.png" alt="Discovery" />
+
+                        </i>
+                        <h2>
+                            DISCOVERY
+                        </h2>
+                        <p>A thorough discovery is at the core of every successful digital solution we craft.
+                            Understanding who you are building for and why you are building it
+                            is more important than the colors or technology you use.
+                            If you don't know these things first, the rest is pointless</p>
+                    </div>
+                    <div class="expert-footer">
+                        <a href="#"> Explore Service &Gt; </a>
+                    </div>
+                </div>
+                <div class="expert-wrap col-md-4 col-lg-4">
+                    <div class="expert-body">
+                        <i>
+                            <img src="image/qe-best-class.png" alt="Discovery" />
+
+                        </i>
+                        <h2>
+                            DISCOVERY
+                        </h2>
+                        <p>A thorough discovery is at the core of every successful digital solution we craft.
+                            Understanding who you are building for and why you are building it
+                            is more important than the colors or technology you use.
+                            If you don't know these things first, the rest is pointless</p>
+                    </div>
+                    <div class="expert-footer">
+                        <a href="#"> Explore Service &Gt; </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+        <section id="who-we-are" class="wwe-are container-fluid">
+            <div class=" text-center mr-5">
+                <h2 class="border-bottom text-primary font-weight-bold">TECHNOLOGIES</h2>
+            </div>
+            <div class="row">
+
+
+                <div class="col-md-4">
+                    <img class="figure-img" src="Image/developer-of-SPINX.jfif" />
+                </div>
+                <div class="who-we col-md-8" role="tablist " id="list-about" aria-multiselectable="true">
+                    <div class="card z-depth-0 border">
+                        <div class="card-header " role="tab" id="h1">
+                            <a data-toggle="collapse" data-parent="#list-about" id="h1-click" href="#ac1"
+                                aria-expanded="true" aria-controls="ac1">
+                                <h2 class="mb-0">
+                                    <i class="icon"></i>
+                                    CONNECT
+
+                                </h2>
+                            </a>
+
+
+                        </div>
+
+                        <div id="ac1" class="collapse show" role="tabpanel" aria-labelledby="h1"
+                            data-parent="#list-about">
+                            <div style="font-size: 20px;" class="card-body  cd-center">
+                                <p>YOU & TECHZONE & THE AUDIENCE</p>
+                                <p>
+
+                                    We believe the most effective connections are emotional. People know it when they
+                                    feel it.
+                                    Our interactive web design agency in Los Angeles helps you connect with your
+                                    audience
+                                    in exciting and engaging ways. We focus on your success by defining your needs and
+                                    achieving your goals
+                                    We believe the most effective connections are emotional. People know it when they
+                                    feel it.
+                                    Our interactive web design agency in Los Angeles helps you connect with your
+                                    audience
+                                    in exciting and engaging ways. We focus on your success by defining your needs and
+                                    achieving your goals
+                                    veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                                    ea commodo consequat.
+                                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                    consequat,
+                                    vel illum dolore eu feugiat nulla facilisis at vero eros</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card z-depth-0 border">
+                        <div class="card-header " role="tab" id="h2">
+                            <a data-toggle="collapse" data-parent="#list-about" id="h2-click" href="#ac2"
+                                aria-expanded="true" aria-controls="ac2">
+                                <h2 class="mb-0">
+                                    CREATE
+
+                                </h2>
+                            </a>
+
+
+                        </div>
+
+                        <div id="ac2" class="collapse " role="tabpanel" aria-labelledby="h2" data-parent="#list-about">
+                            <div style="font-size: 20px;" class="card-body cd-center">
+                                <p>YOU & TECHZONE & THE AUDIENCE</p>
+                                <p>
+
+                                    We believe the most effective connections are emotional. People know it when they
+                                    feel it.
+                                    Our interactive web design agency in Los Angeles helps you connect with your
+                                    audience
+                                    in exciting and engaging ways. We focus on your success by defining your needs and
+                                    achieving your goals
+                                    veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                                    ea commodo consequat.
+                                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                    consequat,
+                                    vel illum dolore eu feugiat nulla facilisis at vero eros </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card z-depth-0 border">
+                        <div class="card-header " role="tab" id="h3">
+                            <a data-toggle="collapse" data-parent="#list-about" id="h3-click" href="#ac3"
+                                aria-expanded="true" aria-controls="ac3">
+                                <h2 class="mb-0">
+                                    EVOLVE
+
+                                </h2>
+                            </a>
+
+
+                        </div>
+
+                        <div id="ac3" class="collapse " role="tabpanel" aria-labelledby="h3" data-parent="#list-about">
+                            <div style="font-size: 20px;" class="card-body cd-center">
+                                <p>YOU & TECHZONE & THE AUDIENCE</p>
+                                <p>
+                                    We believe the most effective connections are emotional. People know it when they
+                                    feel it.
+                                    Our interactive web design agency in Los Angeles helps you connect with your
+                                    audience
+                                    in exciting and engaging ways. We focus on your success by defining your needs and
+                                    achieving your goals
+                                    veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                                    ea commodo consequat.
+                                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                    consequat,
+                                    vel illum dolore eu feugiat nulla facilisis at vero eros
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="container-fluid" id="about-info">
+            <div class="adjust-text ">
+                <h2 class="border-bottom text-primary text-center mr-5">WHO WE ARE</h2>
+                <p>We have a deep understanding of user habits and behaviors.
+                    We are committed to using fact-based knowledge and our unique brand of innovation to help you
+                    dominate the competition.
+                    Every project is customized for optimum visibility and audience response.</p>
+
+            </div>
+
+            <div class="rowa">
+                <div class="column">
+                    <img class="fadeRight" src="Image/loo.png" style="width: 100%;" />
+                    <img class="fadeLeft" src="Image/pf-img.png" style="width: 100%;" />
+
+
+                </div>
+
+                <div class=" fadeLeft column">
+                    <div class="card bg-primary">
+                        <div class="card-body">
+                            <p>
+                                WE Think big and we start from smaller
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="column">
+                    <img src="Image/creative-people-discussing.jfif" style="width: 100%;" />
+                    <img class="fadeLeft" src="Image/pf-img.png" style="width: 100%;" />
+                </div>
+                <div class="column fadeLeft">
+                    <img src="Image/design-agency-Los-Angeles.png" style="width: 100%;" />
+
+                    <div class="card bg-primary">
+                        <div class="card-body">
+                            <p>
+                                WE Think big and we start from smaller
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact-us" class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 experience">
+                    <div class="jumbotron-fluid ">
+                        <h2>ENGAGE AND EXPERIENCE</h2>
+                        <h3>+251920796557</h3>
+
+                        <div class="address border-bottom">
+                            <p>AA,Ethiopia <br>You can call us 0909909900</p>
+
+
+                        </div>
+
+                        <div class="recommended-blog">
+                            <h5>RECOMMENDED FROM OUR <span><a>[BLOG]</a></span></h5>
+                            <div class="blog">
+                                <p><a href="#" class="">We started a new company</a> called TECHZONE GENERAL IT SOlution
+                                    bla bla bla bla bla bla bla bla
+                                    bla bla bla bla
+                                    bla bla bla bla
+                                    bla bla bla bla
+                                    bla bla bla bla
+
+
+                                </p>
+
+                            </div>
+                            <div class="blog">
+                                <p><a href="#" class=" ">We started a new company</a> called TECHZONE GENERAL IT
+                                    SOlution
+                                    bla bla bla bla bla bla bla bla
+                                    bla bla bla bla
+                                    bla bla bla bla
+                                    bla bla bla bla
+                                    bla bla bla bla
+
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="contact-us col-md-6">
+                    <form class="form">
+                        <div class="form-text">
+                            <h2>CONTCT US</h2>
+                        </div>
+                        <div class="form-group">
+                            <label for="fname" class="form-text p-md-2">First Name <span
+                                    class="required">*</span></label>
+                            <input id="fname" nam="fname" class="form-control bg-dark" />
+                        </div>
+                        <div class="form-group">
+                            <label for="lname" class="form-text p-md-2">Last Name <span
+                                    class="required">*</span></label>
+                            <input id="lname" nam="lname" class="form-control bg-dark" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-text p-md-2">Email<span class="required">*</span></label>
+                            <input id="email" nam="email" type="email" class="form-control bg-dark" />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-text p-md-2">Phone <span class="required">*</span></label>
+                            <input id="phone" type="tel" nam="phone" class="form-control bg-dark" />
+                        </div>
+                        <div class="form-group">
+                            <label for="fname" class="form-text p-md-2">Project Type Product<span
+                                    class="required">*</span></label>
+                            <select class="custom-select">
+                                <option class="custom-select">Discovery Strategy</option>
+                                <option>Discovery Strategy</option>
+
+                                <option>Discovery Strategy</option>
+                                <option>Discovery Strategy</option>
+                                <option>Discovery Strategy</option>
+                                <option>Discovery Strategy</option>
+
+
+                            </select>
+
+
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-text p-md-2">Message<span class="required">*</span></label>
+                            <textarea id="message" nam="message" class="form-control bg-dark"></textarea>
+                        </div>
+                        <div class="custom-radio"> <input class="custom-radio" type="checkbox" name="recievemonth" />
+                            Recieve Monthly updates
+                            covering marketing ,Strategy,design,and all</div>
+
+                        <div class="text-center">
+                            <input type="submit" name="Submit" class="btn btn-outline-success text-center"
+                                value="Submit" />
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container-fluid">
+            <div class=" row ">
+                <div class="col-md-4">
+                    <span>&copy; 2020 TECHZONE GITS</span>
+                </div>
+                <div class="col-md-4">
+                    <span>&copy; All Right Reserved </span>
+                </div>
+                <div class="col-md-4">
+                    <span>&copy; <a href="#">privacy</a> <a href="#">privacy</a></span>
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </footer>
+    <a href="#top" class="to-top">
+        TOP
+    </a>
+
+
+
+</body>
+<script>
+
+
+
+</script>
+
+
+
+</html>

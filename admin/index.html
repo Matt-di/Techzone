@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" />
+    <link href="../Image/loo.png" type="x-ico" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    <title>Admin Dashboard</title>
+
+    <script>
+      $(window).scroll(function (e) {
+        if (
+          document.body.scrollTop > 70 ||
+          document.documentElement.scrollTop > 70
+        ) {
+          $(".to-top").show();
+        } else {
+          $(".to-top").hide();
+        }
+      });
+      $(document).ready(function () {
+        $("#add-user").click(function () {
+          var texx =
+            '<form class="form" action="/useradd" method="POST">' +
+            '<input class="form-control" type="text" id="username" name="username" placeholder="user name"/>' +
+            '<input class="form-control" id="fname" name="fname" placeholder="First name"/>' +
+            '<input class="form-control" id="lname" name="lname" placeholder="Last Name"/>' +
+            '<input class="form-control" id="email" name="email" placeholder="email address" type="email"/>' +
+            '<input class="form-control" id="password" name="password" placeholder="Password" type="password"/>' +
+            '<input class="btn btn-outline-success" type="submit" value="ADD"/> ' +
+            "</form>";
+          $(".modal-title").text("ADD NEW USER");
+          $(".modal-body").html(texx);
+          $("#myModal").modal();
+        });
+        $("#add-post").click(function () {
+          var modalbody =
+            '<form class="form" action="/postadd" method="POST">' +
+            '<div class="form-group">' +
+            '<label class="form-text col-form-label" for="posttitle"> Title</label><input class="form-control" type="text" id="posttitle" name="posttitle" placeholder="Post title..."/> </div>' +
+            '<textarea class="form-control-plaintext border-primary" id="postcontent" name="postcontent" placeholder="Post content"/>' +
+            '<input class="btn btn-outline-success mr-5" type="submit" value="ADD"/> ' +
+            "</form>";
+          $(".modal-title").text("ADD NEW POST");
+          $(".modal-body").html(modalbody);
+          $(".modal-header").addClass("bg-primary text-center");
+          $("#myModal").modal({ backdrop: true });
+        });
+
+        $("#add-notification").click(function () {
+          let notification = {
+            notif_id: "not1",
+            notif_title: "ABout meeting",
+            notif_body:
+              "Hey members , hope you all are fine. On Next Sunday\
+            we have meeting on the following agendas\
+            \n<p>1-What content is displayed on our portfolio</p>\
+            \n<p>1-What content is displayed on our portfolio</p>\
+            \n<p>1-What content is displayed on our portfolio</p>",
+            like: 4,
+            dislike: 2,
+          };
+          var modalbody =
+            '<form class="form" action="/notifadd" method="POST">' +
+            '<div class="form-group">' +
+            '<label class="form-text col-form-label" for="notif_title"> Title</label><input class="form-control" type="text" id="notif_title" name="posttitle" placeholder="Notification title..."/> </div>' +
+            '<textarea class="form-control-plaintext border-primary" id="notif_body" name="postcontent" placeholder="Notification content"/>' +
+            '<input class="btn btn-outline-success mr-5" type="submit" value="ADD"/> ' +
+            "</form>";
+          $(".modal-title").text("Add New Notifiction");
+          $(".modal-body").html(modalbody);
+          $(".modal-header").addClass("bg-primary text-center");
+          $("#myModal").modal({ backdrop: true });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container-fluid=">
+      <header class="row top-header sticky-top" id="top-header">
+        <div class="col-md-4">
+          <img
+            src="../Image/loo.png"
+            style="width: 200px; height: 100%"
+            alt="logo"
+          />
+        </div>
+        <div class="col-md-4">
+          <div class="wraps">
+            <input type="search" class="form-control" placeholder="Searc" />
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="wraps float-right">
+            <button type="button" class="btn btn-outline-dark">Log out</button>
+            <a type="button" href="../index.html" class="btn btn-link"
+              >Home Page</a
+            >
+          </div>
+          <h3>Soem text</h3>
+        </div>
+      </header>
+      <a></a>
+      <div class="sidenav" id="sidenav">
+        <a id="add-user" class="btn btn-outline-primary" href="#">ADD USER</a>
+
+        <a id="add-post" class="btn btn-outline-primary" href="#">ADD POST</a>
+
+        <a id="add-notification" class="btn btn-outline-primary" href="#"
+          >NOTIFICATIONS</a
+        >
+
+        <a id="lchat" class="btn btn-outline-primary" href="#">LIVE CHAT </a>
+
+        <a id="members" class="btn btn-outline-primary" href="members.html"
+          >MEMBERS</a
+        >
+      </div>
+
+      <main class="row">
+        <section class="col-md-6" id="post-section">
+          <div class="post">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title text-center">
+                  <h2>
+                    <span class="glyphicon glyphicon-user"></span> POST ON FROM
+                  </h2>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, cibo sensibus interesset no sit.
+                  Et dolor possim volutpat qui. No malis tollit iriure eam, et
+                  vel tale zril blandit, rebum vidisse nostrum qui eu. No
+                  nostrud dolorem legendos mea, ea eum mucius oporteat
+                  platonem.Eam an case scribentur, ei clita causae cum, alia
+                  debet eu vel. Lorem ipsum dolor sit amet, cibo sensibus
+                  interesset no sit. Et dolor possim volutpat qui. No malis
+                  tollit iriure eam, et vel tale zril blandit, rebum vidisse
+                  nostrum qui eu. No nostrud dolorem legendos mea, ea eum mucius
+                  oporteat platonem.Eam an case scribentur, ei clita causae cum,
+                  alia debet eu vel.
+                </p>
+              </div>
+              <div class="card-footer post-footer bg-info">
+                <ul class="">
+                  <li>
+                    <a href="#"
+                      ><span class="badge mr-2 badge-primary">4</span>LIKE</a
+                    >
+                  </li>
+                  <li><a href="#">REPLY</a></li>
+                  <li><a href="#">LIKE</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title text-center">
+                  <h2>
+                    <span class="glyphicon glyphicon-user"></span> POST ON FROM
+                  </h2>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, cibo sensibus interesset no sit.
+                  Et dolor possim volutpat qui. No malis tollit iriure eam, et
+                  vel tale zril blandit, rebum vidisse nostrum qui eu. No
+                  nostrud dolorem legendos mea, ea eum mucius oporteat
+                  platonem.Eam an case scribentur, ei clita causae cum, alia
+                  debet eu vel. Lorem ipsum dolor sit amet, cibo sensibus
+                  interesset no sit. Et dolor possim volutpat qui. No malis
+                  tollit iriure eam, et vel tale zril blandit, rebum vidisse
+                  nostrum qui eu. No nostrud dolorem legendos mea, ea eum mucius
+                  oporteat platonem.Eam an case scribentur, ei clita causae cum,
+                  alia debet eu vel.
+                </p>
+              </div>
+              <div class="card-footer post-footer bg-info">
+                <ul class="">
+                  <li>
+                    <a href="#"
+                      ><span class="badge mr-2 badge-dark">4</span>LIKE</a
+                    >
+                  </li>
+                  <li><a href="#">REPLY</a></li>
+                  <li><a href="#">LIKE</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title text-center">
+                  <h2>
+                    <span class="glyphicon glyphicon-user"></span> POST ON FROM
+                  </h2>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, cibo sensibus interesset no sit.
+                  Et dolor possim volutpat qui. No malis tollit iriure eam, et
+                  vel tale zril blandit, rebum vidisse nostrum qui eu. No
+                  nostrud dolorem legendos mea, ea eum mucius oporteat
+                  platonem.Eam an case scribentur, ei clita causae cum, alia
+                  debet eu vel. Lorem ipsum dolor sit amet, cibo sensibus
+                  interesset no sit. Et dolor possim volutpat qui. No malis
+                  tollit iriure eam, et vel tale zril blandit, rebum vidisse
+                  nostrum qui eu. No nostrud dolorem legendos mea, ea eum mucius
+                  oporteat platonem.Eam an case scribentur, ei clita causae cum,
+                  alia debet eu vel.
+                </p>
+              </div>
+              <div class="card-footer post-footer bg-info">
+                <ul class="">
+                  <li>
+                    <a href="#"
+                      ><span class="badge mr-2 badge-dark">4</span>LIKE</a
+                    >
+                  </li>
+                  <li><a href="#">REPLY</a></li>
+                  <li><a href="#">LIKE</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-md-4" id="notification-section">
+          <div class="jumbotron">
+            <h2 class="text-center text-primary border-bottom">
+              Notifications
+            </h2>
+            <div class="notification">
+              <div class="notif-body">
+                Lorem ipsum dolor sit amet, cibo sensibus interesset no sit. Et
+                dolor possim volutpat qui. No malis tollit iriure eam, et vel
+                tale zril blandit, rebum vidisse nostrum qui eu. No nostrud
+                dolorem legendos mea, ea eum mucius oporteat platonem.Eam an
+                case scribentur, ei clita causae cum, alia debet eu vel.
+              </div>
+              <a href="#"> See more</a>
+            </div>
+            <div class="notification">
+              <div class="notif-body">
+                Lorem ipsum dolor sit amet, cibo sensibus interesset no sit. Et
+                dolor possim volutpat qui. No malis tollit iriure eam, et vel
+                tale zril blandit, rebum vidisse nostrum qui eu. No nostrud
+                dolorem legendos mea, ea eum mucius oporteat platonem.Eam an
+                case scribentur, ei clita causae cum, alia debet eu vel.
+              </div>
+              <a href="#"> See more</a>
+            </div>
+            <div class="notification">
+              <div class="notif-body">
+                Lorem ipsum dolor sit amet, cibo sensibus interesset no sit. Et
+                dolor possim volutpat qui. No malis tollit iriure eam, et vel
+                tale zril blandit, rebum vidisse nostrum qui eu. No nostrud
+                dolorem legendos mea, ea eum mucius oporteat platonem.Eam an
+                case scribentur, ei clita causae cum, alia debet eu vel.
+              </div>
+              <a href="#"> See more</a>
+            </div>
+          </div>
+        </section>
+        <a href="#top" class="to-top"> TOP </a>
+
+        <footer class="footer">
+          &COPY; All right Reserved |
+          <span><a href="../index.html">TECHZONE GENERAL IT SOLUTION</a></span>
+        </footer>
+      </main>
+    </div>
+
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add New User</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <div class="modal-body"></div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
